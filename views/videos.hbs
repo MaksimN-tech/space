@@ -1,0 +1,39 @@
+<h1>Video</h1>
+<form class="videos" name="video-input">
+<input  id="video-input" class="input" type="text" placeholder="Text input">
+</form>
+
+<div class="img-wrapper is-flex is-flex-wrap-wrap">
+{{#each arr}}
+<div class="info-content tilt-in-fwd-tr">
+
+  <div class="card" id="cards">
+
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src={{this.img}}
+      </figure>
+    </div>
+
+    <div class="card-content">
+      <p class="title">
+      <a href=/space/{{this.date}}>{{this.title}}</a>
+      </p>
+      <p class="subtitle">
+       <i class="fas fa-thumbs-up"></i>
+
+      </p>
+      <p class="subtitle">
+      {{this.description}}...
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+{{/each}}
+
+
+</div>
+
