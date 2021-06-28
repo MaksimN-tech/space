@@ -29,7 +29,6 @@ router.route('/')
       }
     }catch(e) {
       res.status(404).redirect('/');
-      // res.status(404).render('badLogin')
     }
   })
 

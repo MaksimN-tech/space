@@ -20,11 +20,8 @@ router.post('/', (req,res) => {
 
   axios.get(`https://images-api.nasa.gov/search?q=${val}&media_type=image`)
   .then((response) => {
-   
-    // console.log(response.data.collection.items[1]);
 
       let data = (response.data.collection.items);
-      // console.log(data)
       const dataArray = [];
       data.forEach(element => {
         dataArray.push({
@@ -33,7 +30,6 @@ router.post('/', (req,res) => {
         })
       });
 
-      // console.log(dataArray);
       res.json(dataArray)
   });
 })
